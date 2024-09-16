@@ -51,7 +51,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={clsx(
-          "mx-auto h-screen min-h-[640px] max-w-[1920px] bg-gray-1 font-sans text-gray-6 antialiased",
+          "mx-auto h-screen min-h-[640px] max-w-[1920px] bg-gray-1 font-sans text-gray-6 antialiased dark:bg-grayDark-1 dark:text-grayDark-6",
           Mori.variable,
         )}
       >

@@ -48,7 +48,7 @@ export default function IndexPage() {
         <div className="flex flex-col items-center gap-1 text-sm sm:absolute sm:right-6 sm:top-6 sm:items-end lg:right-8 -sm:col-span-4 -sm:row-start-8">
           Have a project in mind?
           <a
-            className="rounded-full bg-gray-2 px-2 py-1 leading-none hover:bg-gray-3 focus:bg-gray-4"
+            className="rounded-full bg-gray-2 px-2 py-1 leading-none hover:bg-gray-3 focus:bg-gray-4 dark:bg-grayDark-2 dark:hover:bg-grayDark-3 dark:focus:bg-grayDark-4"
             href="mailto:hello@mtths.co"
           >
             hello@mtths.co
@@ -57,10 +57,10 @@ export default function IndexPage() {
       </main>
       <footer className="grid grid-cols-4 place-content-end gap-4 text-sm sm:absolute sm:left-0 sm:top-1/2 sm:col-span-6 sm:w-full sm:max-w-[1920px] sm:-translate-y-1/2 sm:grid-cols-6 sm:place-content-start sm:px-6 lg:grid-cols-12 lg:px-8 -sm:col-span-4 -sm:row-start-12">
         <button className="flex h-max w-max items-center gap-[0.375rem]">
-          <div className="mt-[0.125rem] h-[0.625rem] w-[0.625rem] rounded-full bg-gray-6" />
+          <div className="mt-[0.125rem] h-[0.625rem] w-[0.625rem] rounded-full bg-gray-6 dark:bg-grayDark-6" />
           Dark
         </button>
-        <div className="sm:col-span-2 sm:col-start-3 sm:grid sm:grid-cols-2 sm:gap-4 sm:text-gray-5 lg:col-span-3 lg:col-start-4 lg:grid-cols-3 -sm:col-start-2 -sm:justify-self-end">
+        <div className="sm:col-span-2 sm:col-start-3 sm:grid sm:grid-cols-2 sm:gap-4 sm:text-gray-5 lg:col-span-3 lg:col-start-4 lg:grid-cols-3 -sm:col-start-2 -sm:justify-self-end dark:sm:text-grayDark-5">
           Social
           <br />
           <a
@@ -73,7 +73,7 @@ export default function IndexPage() {
             Read.cv ↗
           </a>
         </div>
-        <span className="col-span-2 col-start-3 sm:col-start-5 sm:text-gray-5 lg:col-start-11 -lg:justify-self-end">
+        <span className="col-span-2 col-start-3 sm:col-start-5 sm:text-gray-5 lg:col-start-11 -lg:justify-self-end dark:sm:text-grayDark-5">
           <span className={clsx("font-serif", EditorialNew.variable)}>©</span>
           &nbsp;2024 <br /> All rights reserved.
         </span>
