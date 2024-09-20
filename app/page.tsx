@@ -1,6 +1,7 @@
 import Image from "next/image"
 import clsx from "clsx"
 import { EditorialNew } from "@/styles/fonts"
+import ThemeSwitch from "@/components/ThemeSwitch"
 
 export default function IndexPage() {
   return (
@@ -56,10 +57,7 @@ export default function IndexPage() {
         </div>
       </main>
       <footer className="grid grid-cols-4 place-content-end gap-4 text-sm sm:absolute sm:left-0 sm:top-1/2 sm:col-span-6 sm:w-full sm:max-w-[1920px] sm:-translate-y-1/2 sm:grid-cols-6 sm:place-content-start sm:px-6 lg:grid-cols-12 lg:px-8 -sm:col-span-4 -sm:row-start-12">
-        <button className="flex h-max w-max items-center gap-[0.375rem]">
-          <div className="mt-[0.125rem] h-[0.625rem] w-[0.625rem] rounded-full bg-gray-6 dark:bg-grayDark-6" />
-          Dark
-        </button>
+        <ThemeSwitch />
         <div className="sm:col-span-2 sm:col-start-3 sm:grid sm:grid-cols-2 sm:gap-4 sm:text-gray-5 lg:col-span-3 lg:col-start-4 lg:grid-cols-3 -sm:col-start-2 -sm:justify-self-end dark:sm:text-grayDark-5">
           Social
           <br />
