@@ -5,6 +5,7 @@ import clsx from "clsx"
 import { ThemeProvider } from "next-themes"
 import { carouselItems } from "@/lib/data"
 import { ItemContext } from "@/utils/context"
+import { motion } from "framer-motion"
 
 interface ProvidersProps {
   children: React.ReactNode
@@ -64,10 +65,17 @@ export default function Providers({ children }: ProvidersProps) {
     }
   }, [isDesktop, isMobileOrTablet])
 
+  // Animation
+  const animationProps = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { duration: 0.5, delay: 0.25 },
+  }
+
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <ItemContext.Provider value={{ currentIndex }}>
-        <div
+        <motion.div
           className={clsx(
             "relative h-full p-4 sm:p-6 lg:px-8 -sm:grid -sm:grid-cols-4 -sm:grid-rows-12 -sm:gap-4",
             isDesktop &&
@@ -81,9 +89,10 @@ export default function Providers({ children }: ProvidersProps) {
               cursorPosition >= window.innerWidth / 2 &&
               "cursor-e-resize",
           )}
+          {...animationProps}
         >
           {children}
-        </div>
+        </motion.div>
       </ItemContext.Provider>
     </ThemeProvider>
   )
