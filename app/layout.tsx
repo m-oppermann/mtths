@@ -2,7 +2,7 @@ import "@/styles/globals.css"
 import type { Metadata } from "next"
 import { clsx } from "clsx"
 import { Mori } from "@/styles/fonts"
-import { ThemeProvider } from "next-themes"
+import Providers from "@/components/Providers"
 
 export const metadata: Metadata = {
   title: "Matthias Oppermann",
@@ -56,9 +56,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           Mori.variable,
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
