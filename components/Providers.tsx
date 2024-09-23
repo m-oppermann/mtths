@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import clsx from "clsx"
 import { ThemeProvider } from "next-themes"
 import { carouselItems } from "@/lib/data"
@@ -16,6 +17,9 @@ export default function Providers({ children }: ProvidersProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [cursorPosition, setCursorPosition] = useState<number | null>(null)
   const [isHoveringInteractive, setIsHoveringInteractive] = useState(false)
+
+  const pathname = usePathname()
+  const isHomePage = pathname === "/"
 
   const isDesktop = typeof window !== "undefined" && window.innerWidth > 1024
   const isMobileOrTablet =
@@ -78,12 +82,14 @@ export default function Providers({ children }: ProvidersProps) {
         <motion.div
           className={clsx(
             "relative h-full p-4 sm:p-6 lg:px-8 -sm:grid -sm:grid-cols-4 -sm:grid-rows-12 -sm:gap-4",
-            isDesktop &&
+            isHomePage &&
+              isDesktop &&
               !isHoveringInteractive &&
               cursorPosition !== null &&
               cursorPosition < window.innerWidth / 2 &&
               "cursor-w-resize",
-            isDesktop &&
+            isHomePage &&
+              isDesktop &&
               !isHoveringInteractive &&
               cursorPosition !== null &&
               cursorPosition >= window.innerWidth / 2 &&
