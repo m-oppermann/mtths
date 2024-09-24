@@ -3,19 +3,19 @@ import type { Metadata } from "next"
 import { clsx } from "clsx"
 import { Mori } from "@/styles/fonts"
 import Providers from "@/components/Providers"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Matthias Oppermann",
   description:
     "Creating for the web by combining strategy, creative direction, digital design and web development.",
-  /*
   openGraph: {
     title: "Matthias Oppermann",
     description:
       "Creating for the web by combining strategy, creative direction, digital design and web development.",
     url: "https://mtths.co",
     images: {
-      url: "",
+      url: "https://mtths.co/images/preview.jpg",
       width: 1200,
       height: 630,
     },
@@ -26,21 +26,20 @@ export const metadata: Metadata = {
     title: "Matthias Oppermann",
     description:
       "Creating for the web by combining strategy, creative direction, digital design and web development.",
-    images: "",
+    images: "https://mtths.co/images/preview.jpg",
   },
   icons: {
     icon: {
-      url: "",
+      url: "https://mtths.co/icons/favicon.png",
       sizes: "32x32",
       type: "image/png",
     },
     apple: {
-      url: "",
+      url: "https://mtths.co/icons/apple-touch-icon.png",
       sizes: "180x180",
       type: "image/png",
     },
   },
-  */
 }
 
 interface RootLayoutProps {
@@ -57,6 +56,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   )
