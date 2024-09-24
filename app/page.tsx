@@ -9,11 +9,11 @@ export default function IndexPage() {
       <header className="sm:absolute -sm:col-span-4 -sm:row-span-1">
         <h1
           className={clsx(
-            "flex font-serif text-lg sm:text-xl -sm:place-content-between",
+            "font-serif text-lg sm:text-xl -sm:flex -sm:place-content-between",
             EditorialNew.variable,
           )}
         >
-          <span className="interactive pointer-events-auto italic">
+          <span className="interactive pointer-events-auto italic -sm:mt-0.5">
             Matthias&nbsp;
           </span>
           <span className="interactive pointer-events-auto">Oppermann</span>
