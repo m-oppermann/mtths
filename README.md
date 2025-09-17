@@ -1,4 +1,4 @@
-mtths is my personal web site describing what I do and presenting my work.
+mtths is a website describing and presenting my design & development work.
 
 ### Design
 
